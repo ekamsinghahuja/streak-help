@@ -38,30 +38,45 @@
   filter: invert(1);
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%, 97% 21%, 52% 99%, 10% 29%, 97% 96%, 33% 50%, 79% 53%;
+  }
+  25% {
+    background-position: 50% 50%, 87% 31%, 42% 89%, 20% 39%, 87% 86%, 43% 60%, 69% 63%;
+  }
+  50% {
+    background-position: 100% 100%, 77% 41%, 32% 79%, 30% 49%, 77% 76%, 53% 70%, 59% 73%;
+  }
+  75% {
+    background-position: 50% 50%, 67% 51%, 22% 69%, 40% 59%, 67% 66%, 63% 80%, 49% 83%;
+  }
+  100% {
+    background-position: 0% 0%, 97% 21%, 52% 99%, 10% 29%, 97% 96%, 33% 50%, 79% 53%;
+  }
+}
+
 .gradient {
   height: fit-content;
   z-index: 3;
   width: 100%;
   max-width: 640px;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, rgb(60, 242, 75) 0px, transparent 60%),
-    radial-gradient(at 52% 99%, rgb(235, 23, 44) 0px, transparent 60%),
-    radial-gradient(at 10% 29%, rgb(101, 49, 244) 0px, transparent 60%),
-    radial-gradient(at 97% 96%, rgb(243, 178, 67) 0px, transparent 60%),
-    radial-gradient(at 33% 50%, rgb(69, 115, 223) 0px, transparent 60%),
-    radial-gradient(at 79% 53%, rgb(239, 108, 145) 0px, transparent 60%);
+  background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 60%),
+                    radial-gradient(at 97% 21%, rgb(60, 242, 75) 0px, transparent 60%),
+                    radial-gradient(at 52% 99%, rgb(235, 23, 44) 0px, transparent 60%),
+                    radial-gradient(at 10% 29%, rgb(101, 49, 244) 0px, transparent 60%),
+                    radial-gradient(at 97% 96%, rgb(243, 178, 67) 0px, transparent 60%),
+                    radial-gradient(at 33% 50%, rgb(69, 115, 223) 0px, transparent 60%),
+                    radial-gradient(at 79% 53%, rgb(239, 108, 145) 0px, transparent 60%);
   position: absolute;
-  content: "";
   width: 100%;
   height: 100%;
   filter: blur(100px) saturate(150%);
   top: 80px;
   opacity: 0.15;
+  animation: gradientShift 5s ease infinite;
 }
+
 
 @media screen and (max-width: 640px) {
   .main {
@@ -114,9 +129,48 @@
 .summary_box {
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4;
 }
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  10% {
+    background-position: 20% 20%;
+  }
+  20% {
+    background-position: 40% 40%;
+  }
+  30% {
+    background-position: 60% 60%;
+  }
+  40% {
+    background-position: 80% 80%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  60% {
+    background-position: 80% 80%;
+  }
+  70% {
+    background-position: 60% 60%;
+  }
+  80% {
+    background-position: 40% 40%;
+  }
+  90% {
+    background-position: 20% 20%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 .purple_pink_gradient {
   @apply font-black bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
 }
+
 
 
 .fade-in-text {

@@ -26,7 +26,9 @@ const TypingEffect = ({ texts, speed }) => {
 
         const deleteText = () => {
             let index = texts[currentTextIndex].length;
+            
             const deleteInterval = setInterval(() => {
+                
                 if (index > 0) {
                     setTimeout(() => {
                         setDisplayedText((prev) => prev.slice(0, -1));
@@ -37,7 +39,7 @@ const TypingEffect = ({ texts, speed }) => {
                     clearInterval(deleteInterval);
                     setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
                 }
-            }, speed / 2);
+            }, speed);
             clearInterval(interval);
         };
         return () => clearInterval(interval);
