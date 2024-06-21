@@ -16,6 +16,7 @@ const TypingEffect = ({ texts, speed }) => {
                 index++;
             }
             else{
+                
                 setTimeout(() => {
                     deleteText();
                 }, 2000); 
