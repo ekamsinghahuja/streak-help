@@ -5,7 +5,7 @@ import { StoreContext } from '../context/Context';
 
 const Login = ({setSL}) => {
 
-    const [curr, setCurrState] = useState('Sign Up');
+    const [curr, setCurrState] = useState('Log In');
     const [visible, setVisible] = useState(false);
     const [data, setData] = useState({
         name: "",
