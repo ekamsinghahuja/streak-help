@@ -7,9 +7,9 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero = ({ setSL }) => {
   const texts = [
-    "   </> Simplify your reading with Make-Short......</>",
-    "   </> an open-source Artificial intelligence.......</>",
-    "   </> enter a url.......</>",
+    "   </> Simplify your reading with Make-Short....</>  ",
+    "   </> an open-source Artificial intelligence.....</>  ",
+    "   </> enter a url......</>  ",
   ];
   const { token, setToken } = useContext(StoreContext);
   const [visible, setVisible] = useState(false);
